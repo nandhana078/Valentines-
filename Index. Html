@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love ❤️</title>
+  <style>
+    /* Paste all your CSS here */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #140017, #2a0033, #4d0039);
+      color: white;
+    }
+    h1, h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+    }
+    /* ... rest of CSS ... */
+  </style>
+</head>
+<body>
+  <!-- Paste all your HTML content here -->
+  <div class="home">
+    <h1>Happy Valentine’s Day Sothmaniii ❤️</h1>
+    <button onclick="openPage('letter')">A Letter for You 💌</button>
+    <button onclick="openPage('reasons')">Reasons I Love You 🤍</button>
+    <button onclick="openPage('valentine')">Special Question 🌹</button>
+  </div>
+  
+  <!-- ...rest of your HTML pages... -->
+
+  <script>
+    // Paste all your JS here
+    function openPage(pageId) {
+      document.querySelector('.home').style.display = "none";
+      document.querySelectorAll('.page').forEach(p => p.style.display = "none");
+      document.getElementById(pageId).style.display = "block";
+    }
+    function goHome() {
+      document.querySelectorAll('.page').forEach(p => p.style.display = "none");
+      document.querySelector('.home').style.display = "block";
+    }
+    function showMessage(num) {
+      const messages = {
+        1: "Your presence makes me calm without trying 🤍",
+        2: "Your baby side is my biggest weakness 🥹",
+        3: "I love taking care of you… even when you act impossible 😌",
+        4: "You annoy me… but you’re still my favourite person ❤️",
+        5: "With you, I can be soft and silly 🌙",
+        6: "You’re not serious… but you’re seriously mine ♾️"
+      };
+      document.getElementById("message").innerText = messages[num];
+    }
+    function sayYes() {
+      document.getElementById("answerMessage").innerText =
+        "Good choice 😌❤️ You were never given another option anyway. You are officially possessed by me. Only mine. Always mine ♾️💗";
+    }
+  </script>
+</body>
+</html>
